@@ -139,7 +139,7 @@ module.exports = function init(exec, cookieHandler, urlUtil, helpers, globalConf
     return exec(success, failure, 'CordovaHttpPlugin', 'setClientAuthMode', [mode, options.alias, options.rawPkcs, options.pkcsPassword]);
   }
 
-  function sendRequest(url, options, success, failure) {
+  function sendRequests(url, options, success, failure) {
     helpers.handleMissingCallbacks(success, failure);
 
     options = helpers.handleMissingOptions(options, globalConfigs);
